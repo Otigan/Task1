@@ -1,4 +1,3 @@
-
 package com.example.task1_2.Models;
 
 import com.google.gson.annotations.Expose;
@@ -6,6 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.HashMap;
 
+//This is model for embedded Json object, currency rates
 public class Rates {
 
     @SerializedName("USD")

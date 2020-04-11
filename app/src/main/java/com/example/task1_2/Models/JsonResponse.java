@@ -4,6 +4,8 @@ package com.example.task1_2.Models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+
+//This is model for Json object that we get from api response
 public class JsonResponse {
 
     @SerializedName("success")

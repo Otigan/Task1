@@ -15,11 +15,10 @@ public class Main2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
+        //Getting an intent
         Intent intent = getIntent();
 
-
         textView = findViewById(R.id.text2);
-
 
         textView.setText(intent.getStringExtra(MainActivity.EXTRA_TEXT));
 
