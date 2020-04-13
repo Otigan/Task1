@@ -1,4 +1,4 @@
-package com.example.task1_2.Models;
+package com.example.task1.Models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

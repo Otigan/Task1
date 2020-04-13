@@ -1,4 +1,4 @@
-package com.example.task1_2.Models;
+package com.example.task1.Models;
 
 public class Currency {
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.task1_2">
+    package="com.example.task1">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,8 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name="com.example.task1_2.Main2Activity"></activity>
-        <activity android:name="com.example.task1_2.MainActivity">
+        <activity android:name="com.example.task1.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

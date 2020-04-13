@@ -1,4 +1,4 @@
-package com.example.task1_2;
+package com.example.task1;
 
 import android.content.Context;
 

@@ -1,4 +1,4 @@
-package com.example.task1_2;
+package com.example.task1;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,29 +8,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.task1_2.Models.Currency;
+import com.example.task1.Models.Currency;
 
 import java.util.ArrayList;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     private ArrayList<Currency> list;
-    //Variable of OnItemClick interface
-    private OnItemClickListener mListener;
-
 
     public Adapter(ArrayList<Currency> list) {
         this.list = list;
-    }
-
-    public void setOnItemClickListener(OnItemClickListener listener) {
-        this.mListener = listener;
-    }
-
-
-    //Nesting OnItemClickListener interface so we can implement it in MainActivity
-    public interface OnItemClickListener {
-        void onItemClick(int position);
     }
 
 
@@ -42,26 +29,11 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
 
         //
-        public ViewHolder(View itemView, OnItemClickListener listener) {
+        public ViewHolder(View itemView) {
             super(itemView);
             mText1 = itemView.findViewById(R.id.item_number);
             mText2 = itemView.findViewById(R.id.rate);
             mText3 = itemView.findViewById(R.id.date);
-
-            //Setting click listener on ItemView
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (listener != null) {
-                        int position = getAdapterPosition();
-                        if (position != RecyclerView.NO_POSITION) {
-                            //Passing ItemView position to interface method
-                            listener.onItemClick(position);
-                        }
-                    }
-                }
-            });
-
         }
     }
 
@@ -73,7 +45,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         //Creating view-element from from layout-files
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_layout, parent, false);
         //Creating an instance of ViewHolder
-        ViewHolder vh = new ViewHolder(v, mListener);
+        ViewHolder vh = new ViewHolder(v);
 
         return vh;
     }

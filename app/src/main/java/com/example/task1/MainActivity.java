@@ -1,4 +1,4 @@
-package com.example.task1_2;
+package com.example.task1;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,8 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.task1_2.Models.Currency;
-import com.example.task1_2.Models.JsonResponse;
+import com.example.task1.Models.Currency;
+import com.example.task1.Models.JsonResponse;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -94,29 +94,6 @@ public class MainActivity extends AppCompatActivity {
                 mAdapter = new Adapter(arrayList);
                 //Setting Adapter to our RecyclerView
                 recyclerView.setAdapter(mAdapter);
-
-                //Implementing OnItemClickListener interface in our Adapter
-                mAdapter.setOnItemClickListener(new Adapter.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(int position) {
-
-                        //Creating an intent to start new activity
-                        Intent intent = new Intent(MainActivity.this, Main2Activity.class);
-
-                        //Getting clicked item
-                        Currency currency = arrayList.get(position);
-
-                        //Creating string that will be passed to new activity
-                        String text = "1 EUR равен " + currency.getRate_currency() + " " +
-                                currency.getName_currency();
-
-                        //Putting data string in intent
-                        intent.putExtra(EXTRA_TEXT, text);
-
-                        //Starting a new activity
-                        startActivity(intent);
-                    }
-                });
             }
 
             @Override

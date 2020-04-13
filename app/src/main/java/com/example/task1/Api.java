@@ -1,13 +1,9 @@
-package com.example.task1_2;
+package com.example.task1;
 
-import com.example.task1_2.Models.JsonResponse;
-
-import java.util.List;
+import com.example.task1.Models.JsonResponse;
 
 import retrofit2.Call;
-import retrofit2.http.Field;
 import retrofit2.http.GET;
-import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 
